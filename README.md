@@ -4,6 +4,17 @@ New here, or an AI agent setting this up? Start with SETUP.md.
 
 **Version 0 — updated 25 October 2026.** This is the initial public version.
 
+## Before you start: connection risks
+
+The planner now asks you to read and explicitly acknowledge these risks before enabling connections or saving credentials. The checkbox starts unchecked. Choose **Use offline only** to keep planning without live-feed requests or uploads. You can revisit the notice through **Settings → Review connection risks**. Agreement is remembered locally for this notice version; it is not sent anywhere and is not a security guarantee.
+
+- Keys are stored **unencrypted in localStorage**. Password fields mask the display only. Browser-profile access, sufficiently privileged extensions, or malicious code running on the same origin can expose them.
+- Tokens and keys are transmitted to the intended services when used: Instagram receives the Instagram token; the configured webhook receives its key. The local relay handles the webhook key in memory.
+- Instagram tokens appear in API request URLs, and upstream errors may echo sensitive information. Redact screenshots, network captures, HAR files and error messages before sharing.
+- Uploaded Cloudinary JPEGs have accessible URLs. Protect and restrict the unsigned upload preset, monitor quota and manage hosted-image deletion yourself.
+- Use a trusted local copy. Never enter keys into an unfamiliar hosted or modified copy. Backups contain photos and plans. **Clear saved keys** removes local connection settings but does not revoke keys at their providers.
+- Require approval in the receiving agent before publishing. The planner cannot enforce the receiver's approval process.
+
 ## Report a bug
 
 Bug reports are welcome: open this repository's **Issues** tab and choose **New issue**. Include Version 0, your browser and operating system, steps to reproduce, expected behaviour, and what actually happened. Screenshots and error messages help, but remove tokens, webhook keys, private URLs, account details and personal photos before posting. Issues are public. Never attach an exported plan or browser storage dump.
