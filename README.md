@@ -6,7 +6,7 @@ New here, or an AI agent setting this up? Start with SETUP.md.
 
 ## Before you start: connection risks
 
-The planner now asks you to read and explicitly acknowledge these risks before enabling connections or saving credentials. The checkbox starts unchecked. Choose **Use offline only** to keep planning without live-feed requests or uploads. You can revisit the notice through **Settings → Review connection risks**. Agreement is remembered locally for this notice version; it is not sent anywhere and is not a security guarantee.
+The planner now asks you to read and explicitly acknowledge these risks before entering the planner. The checkbox starts unchecked; tick it and choose **Agree and enable** to continue. An Instagram API token is required for live sync. If you do not agree, close the page. You can revisit the notice through **Settings → Review connection risks**. Agreement is remembered locally for this notice version; it is not sent anywhere and is not a security guarantee.
 
 - Keys are stored **unencrypted in localStorage**. Password fields mask the display only. Browser-profile access, sufficiently privileged extensions, or malicious code running on the same origin can expose them.
 - Tokens and keys are transmitted to the intended services when used: Instagram receives the Instagram token; the configured webhook receives its key. The local relay handles the webhook key in memory.

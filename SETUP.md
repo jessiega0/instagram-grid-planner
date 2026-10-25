@@ -6,7 +6,7 @@
 
 Read **Before you start: connection risks** in README.md and the planner's startup notice. Keys are stored unencrypted in localStorage, sent to their intended services when used, and may appear in network captures or upstream error messages. Cloudinary uploads have accessible URLs, and unsigned presets require restrictions and usage monitoring. Use only a trusted local copy, keep backups private, and require approval from your publishing agent.
 
-The user must tick the unchecked acknowledgement and choose **Agree and enable** before connection requests, uploads or saving credentials are enabled. **Use offline only** keeps local planning available without those actions. The choice can be reviewed in **Settings → Review connection risks**. AI agents must leave this acknowledgement for the person to read and choose; do not accept it on their behalf. This acknowledgement does not encrypt credentials or guarantee security.
+The user must tick the unchecked acknowledgement and choose **Agree and enable** before entering the planner or saving credentials. An Instagram API token is required for live sync. If you do not agree, close the page. The choice can be reviewed in **Settings → Review connection risks**. AI agents must leave this acknowledgement for the person to read and choose; do not accept it on their behalf. This acknowledgement does not encrypt credentials or guarantee security.
 
 This guide covers connecting `planner.html` to Instagram, an image host, and (optionally) an AI agent that publishes for you. See `README.md` for how the planner itself works.
 
