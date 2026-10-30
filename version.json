@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "released": "2026-10-30",
   "notes": [
-    "First versioned release"
+    "Added optional in-app update checks and agent-assisted update instructions"
   ],
   "files": [
     "planner.html",

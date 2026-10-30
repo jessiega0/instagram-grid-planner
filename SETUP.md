@@ -1,6 +1,6 @@
 # Setup guide (for people and their AI agents)
 
-**Version 1.0.0 — released 30 October 2026.** To report a bug, open this repository's **Issues** tab. See README.md for what to include and how to remove private information.
+**Version 1.1.0 — released 30 October 2026.** To report a bug, open this repository's **Issues** tab. See README.md for what to include and how to remove private information.
 
 ## Before entering keys
 

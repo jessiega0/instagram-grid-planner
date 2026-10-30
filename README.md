@@ -2,7 +2,7 @@
 
 New here, or an AI agent setting this up? Start with SETUP.md.
 
-**Version 1.0.0 — released 30 October 2026.** First versioned release.
+**Version 1.1.0 — released 30 October 2026.** Added optional in-app update checks and agent-assisted update instructions.
 
 ## Before you start: connection risks
 
