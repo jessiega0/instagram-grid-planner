@@ -9,6 +9,7 @@
     "server.mjs",
     "README.md",
     "SETUP.md",
+    "CHANGELOG.md",
     "version.json"
   ]
 }

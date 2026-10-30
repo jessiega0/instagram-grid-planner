@@ -4,6 +4,8 @@ New here, or an AI agent setting this up? Start with SETUP.md.
 
 **Version 1.1.0 — released 30 October 2026.** Added optional in-app update checks and agent-assisted update instructions.
 
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each version.
+
 ## Before you start: connection risks
 
 The planner now asks you to read and explicitly acknowledge these risks before entering the planner. The checkbox starts unchecked; tick it and choose **Agree and enable** to continue. An Instagram API token is required for live sync. If you do not agree, close the page. You can revisit the notice through **Settings → Review connection risks**. Agreement is remembered locally for this notice version; it is not sent anywhere and is not a security guarantee.
@@ -19,12 +21,13 @@ The planner now asks you to read and explicitly acknowledge these risks before e
 
 Bug reports are welcome: open this repository's **Issues** tab and choose **New issue**. Include the version shown in Settings, your browser and operating system, steps to reproduce, expected behaviour, and what actually happened. Screenshots and error messages help, but remove tokens, webhook keys, private URLs, account details and personal photos before posting. Issues are public. Never attach an exported plan or browser storage dump.
 
-This folder is the complete public distribution. Share only these six files:
+This folder is the complete public distribution. Share only these seven files:
 
 - `planner.html`
 - `server.mjs`
 - `README.md`
 - `SETUP.md`
+- `CHANGELOG.md`
 - `.gitignore`
 - `version.json`
 
@@ -73,4 +76,4 @@ See [For agents: checking for updates](SETUP.md#for-agents-checking-for-updates)
 
 ## Releasing an update (maintainer)
 
-Bump APP_VERSION in planner.html and version.json together, update the release date and notes, review the files list, then push. Keep the version in this README and SETUP current. Never include user data in release files.
+Bump APP_VERSION in planner.html and version.json together, update the release date and notes, and add a new entry to the top of CHANGELOG.md. Review the files list, then push. Keep the version in this README and SETUP current. Never include user data in release files.
