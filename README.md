@@ -2,7 +2,7 @@
 
 New here, or an AI agent setting this up? Start with SETUP.md.
 
-**Version 0 — updated 25 October 2026.** This is the initial public version.
+**Version 1.0.0 — released 30 October 2026.** First versioned release.
 
 ## Before you start: connection risks
 
@@ -17,15 +17,16 @@ The planner now asks you to read and explicitly acknowledge these risks before e
 
 ## Report a bug
 
-Bug reports are welcome: open this repository's **Issues** tab and choose **New issue**. Include Version 0, your browser and operating system, steps to reproduce, expected behaviour, and what actually happened. Screenshots and error messages help, but remove tokens, webhook keys, private URLs, account details and personal photos before posting. Issues are public. Never attach an exported plan or browser storage dump.
+Bug reports are welcome: open this repository's **Issues** tab and choose **New issue**. Include the version shown in Settings, your browser and operating system, steps to reproduce, expected behaviour, and what actually happened. Screenshots and error messages help, but remove tokens, webhook keys, private URLs, account details and personal photos before posting. Issues are public. Never attach an exported plan or browser storage dump.
 
-This folder is the complete public distribution. Share only these five files:
+This folder is the complete public distribution. Share only these six files:
 
 - `planner.html`
 - `server.mjs`
 - `README.md`
 - `SETUP.md`
 - `.gitignore`
+- `version.json`
 
 No installation, build step, external libraries, personal posts, or credentials are bundled. Download the folder and open `planner.html` in a modern browser. Six editable grey placeholders start each account's plan; replace or remove them before sending. Published posts are locked. Plans, tags, captions, carousel images, hiding, crop previews, theme, and ordering are saved in this browser's IndexedDB. Exported backups contain your photos and plans, so keep them private.
 
@@ -62,4 +63,14 @@ By default the button says **Send to agent** and uses a neutral bot icon for Cod
 
 Both marks are inline SVG in the single `AGENT_ICON_SVG` constant at the top of the script. Change its SVG strings to swap them. Neither has an external image dependency.
 
-Initialize or publish a repository **inside this folder only**. Do not publish a parent workspace: it may contain unrelated private files. The ignore file excludes JSON, export/image directories, `.env` and `.DS_Store`; it is not a credential scanner and does not remove files already tracked by Git. Review `git status` and staged diffs before every commit. Never add your keys, downloaded photos, exports, or backups to source control.
+Initialize or publish a repository **inside this folder only**. Do not publish a parent workspace: it may contain unrelated private files. The ignore file excludes JSON (except the public `version.json`), export/image directories, `.env` and `.DS_Store`; it is not a credential scanner and does not remove files already tracked by Git. Review `git status` and staged diffs before every commit. Never add your keys, downloaded photos, exports, or backups to source control.
+
+## Checking for updates
+
+On open, the planner checks public release metadata on GitHub with a five-second timeout. Settings has **Check for updates on open** (on by default) and **Check now**. The request contains no keys, plans or custom headers; cookies and referrer are omitted. GitHub still receives ordinary connection metadata such as your IP address. Offline/network errors are silent. A newer release shows notes, a GitHub link and a copyable agent prompt. Dismissal applies only to that version. Nothing is downloaded, replaced or reloaded automatically beyond the version metadata.
+
+See [For agents: checking for updates](SETUP.md#for-agents-checking-for-updates) for the approval and backup procedure.
+
+## Releasing an update (maintainer)
+
+Bump APP_VERSION in planner.html and version.json together, update the release date and notes, review the files list, then push. Keep the version in this README and SETUP current. Never include user data in release files.

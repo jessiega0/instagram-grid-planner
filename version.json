@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "released": "2026-10-30",
+  "notes": [
+    "First versioned release"
+  ],
+  "files": [
+    "planner.html",
+    "server.mjs",
+    "README.md",
+    "SETUP.md",
+    "version.json"
+  ]
+}

@@ -3,3 +3,5 @@ exports/
 images/
 .env
 .DS_Store
+
+!version.json
